@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/teste-D.css">
+    <title>Teste de Digitação</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Teste de digitação</h1>
+
+        <!-- Seletor de Modos de Tempo -->
+        <div class="modo-container">
+            <label for="seletor-modo">Modo:</label>
+            <select id="seletor-modo">
+                <option value="30">30 segundos</option>
+                <option value="60" selected>60 segundos</option>
+                <option value="infinito">Sem temporizador</option>
+            </select>
+        </div>
+
+        <div id="frase" class="frase">Clique em Iniciar para começar!</div>
+
+        <textarea id="entrada" class="entrada" placeholder="Comece a digitar aqui...." disabled></textarea>
+        
+        <div class="painel">
+            <span>Tempo: <strong id="tempo">60s</strong></span>
+            <span>WPM: <strong id="wpm">0</strong></span>
+            <span>Precisão: <strong id="precisao">100</strong>%</span>
+            <span>Erros: <strong id="erros">0</strong></span>
+        </div>
+
+        <!-- Grupo de Botões -->
+        <div class="botoes-grupo">
+            <button id="botao-iniciar">Iniciar</button>
+            <button id="botao-reiniciar" class="btn-reiniciar">Reiniciar</button>
+        </div>
+
+        <!-- JANELA DE RESULTADOS (MODAL) -->
+        <div id="modal-resultado" class="modal-overlay">
+            <div class="modal-content">
+                <h2>Teste Concluído!</h2>
+                <hr>
+                <div class="modal-status">
+                    <p>Velocidade: <strong id="modal-wpm">0</strong> WPM</p>
+                    <p>Caracteres Corretos: <strong id="modal-corretos">0</strong></p>
+                    <p>Erros Cometidos: <strong id="modal-erros">0</strong></p>
+                    <p>Precisão Geral: <strong id="modal-precisao">100</strong>%</p>
+                </div>
+                <hr>
+                <p class="modal-dica">Pressione <kbd>Enter</kbd> para reiniciar o teste</p>
+                <button id="botao-modal-fechar">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JS/teste-D.js"></script>
+    
+</body>
+</html>
