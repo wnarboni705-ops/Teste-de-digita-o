@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    padding: 24px;
+    border-radius: 12px;
+    background: #020617;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.modo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.modo-container select {
+    background: #0f172a;
+    color: #e5e7eb;
+    border: 1px solid #1f2937;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.frase {
+    min-height: 80px;
+    padding: 16px;
+    margin-bottom: 12px;
+    background: #020617;
+    border-radius: 8px;
+    border: 1px solid #1f2937;
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    line-height: 1.6;
+}
+
+.frase span.correto {
+    color: #22c55e;
+}
+.frase span.errado {
+    color: #ef4444;
+    text-decoration: underline;
+}
+
+.entrada {
+    width: 100%;
+    height: 100px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #1f2937;
+    background: #020617;
+    color: #e5e7eb;
+    resize: none;
+    margin-bottom: 12px;
+}
+
+.entrada:focus {
+    outline: 2px solid #38bdf8;
+    outline-offset: 2px;
+}
+
+.painel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.botoes-grupo {
+    display: flex;
+    gap: 12px;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #22c55e;
+    color: #020617;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #008e36;
+}
+
+button.btn-reiniciar {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+button.btn-reiniciar:hover {
+    background: #b91c1c;
+}
+
+/* --- ESTILOS DA JANELA MODAL DE RESULTADOS --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+/* Classe ativa para mostrar a janela */
+.modal-overlay.mostrar {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: #0f172a;
+    border: 2px solid #1f2937;
+    padding: 28px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h2 {
+    color: #38bdf8;
+    margin-bottom: 12px;
+}
+
+.modal-content hr {
+    border: 0;
+    height: 1px;
+    background: #1f2937;
+    margin: 16px 0;
+}
+
+.modal-status {
+    text-align: left;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.modal-status p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.modal-status strong {
+    color: #e5e7eb;
+}
+
+.modal-dica {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 16px;
+}
+
+kbd {
+    background: #1e293b;
+    border: 1px solid #475569;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 11px;
+    box-shadow: 0 2px 0 #475569;
+}
+
+#botao-modal-fechar {
+    background: #38bdf8;
+    color: #020617;
+    width: 100%;
+}
+
+#botao-modal-fechar:hover {
+    background: #0ea5e9;
+}
